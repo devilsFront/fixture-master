@@ -1,0 +1,17 @@
+mixin form(title, btn, mod)
+  form.form(class = mod ? `form_${mod}`: '')
+    .form__cont
+      h3.form__headline!= title
+      ul.form__list
+        li.form__item
+          input.form__input.text(type='text', placeholder='Имя' required)
+        li.form__item
+          input.form__input.text(type='tel', placeholder='Телефон' required)
+        li.form__item
+          input.form__input.text(type='email', placeholder='E-mail' required)
+        li.form__item
+          button.form__submit.btn-yellow.text-big(type='submit')= btn
+      p.form__text.text-small
+        | Я подтверждаю, что ознакомлен и даю согласие на обработку персональных данных на условиях и для целей, определяемых
+        |
+        a.form__link(href='#') политикой конфиденциальности

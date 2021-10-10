@@ -1,0 +1,103 @@
+.store
+  position: relative
+  color: $fc_white
+  padding: 544px 0 55px
+  @include media(1240)
+    padding: 620px 0 55px
+  @include media(950)
+    padding: 256px 0 101px
+
+.store__picture-bg
+  position: absolute
+  z-index: -1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.store__image-bg
+  height: 100%
+  object-fit: cover
+
+.store__cont
+  display: flex
+  justify-content: space-between
+  @include media(950)
+    display: block
+
+.store__inner
+
+.store__title
+  margin-top: 63px
+  margin-bottom: 30px
+  max-width: 618px
+  @include media(520)
+    margin-top: 0
+
+.store__text
+  margin-bottom: 50px
+  max-width: 488px
+  @include media(520)
+    margin-bottom: 53px
+
+.store__list
+  max-width: 486px
+  margin-bottom: 48px
+  @include media(1240)
+    margin-bottom: 50px
+
+.store__item
+  margin-bottom: 18px
+  position: relative
+  display: flex
+  align-items: center
+  @include media(1240)
+    margin-bottom: 21px
+
+.store__item-img
+  flex-shrink: 0
+  margin-top: 2px
+  margin-right: 27px
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  background: $blue
+  +bgIcon('ic_check.svg', 12px, 12px)
+
+.store__item-text
+
+.store__text.store__text_bold
+  max-width: 507px
+  font-weight: bold
+  @include media(950)
+    margin-bottom: 51px
+
+.store__picture
+  margin-right: -30px
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: -37px
+    left: 30px
+    width: 234px
+    height: 163px
+    +bgImg('store/store-bg-1.svg')
+    @include media(1240)
+      width: 135px
+      height: 93px
+      top: -21px
+      left: 0
+      +bgImg('store/store-bg-2.svg')
+  @include media(1240)
+    margin-right: 0
+    margin-top: 70px
+  @include media(950)
+    margin-top: 0
+
+.store__image
+  width: 547px
+  height: 606px
+  @include media(1240)
+    width: 290px
+    height: 338px

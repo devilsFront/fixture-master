@@ -1,0 +1,26 @@
+.store
+  picture.store__picture-bg
+    source(srcset=`${pathImg}background/bg_2-mob.webp` type='image/webp' media="(max-width: 1240px)")
+    source(srcset=`${pathImg}background/bg_2.webp` type='image/webp')
+    source(srcset=`${pathImg}background/bg_2-mob.png` media="(max-width: 1240px)")
+    img.store__image-bg(src=`${pathImg}background/bg_2.png` alt='' loading='lazy')
+  .store__cont.cont
+    .store__inner
+      h2.store__title.title 11 филиалов ГК: масштабы работы и финансовые показатели
+      p.store__text.text-big Сегодня «Мастер Крепёж» — сеть торговых точек и предприятий, работающих с товарами в сегментах B2B и B2C
+      ul.store__list
+        li.store__item
+          .store__item-img
+          span.store__item-text.text 9 торговых точек во всех ключевых районах Нижнего Новгорода
+        li.store__item
+          .store__item-img
+          span.store__item-text.text 1 оптовый склад площадью 2500 м2 в черте города
+        li.store__item
+          .store__item-img
+          span.store__item-text.text 1 собственное производство крепежа площадью 3000 м2
+      p.store__text.store__text_bold.text-big Каждая торговая точка работает стабильно и приносит выручку на уровне от 180 000 до 480 000 рублей ежемесячно
+    picture.store__picture
+      source(srcset=`${pathImg}store/store-1_290.webp 1x, ${pathImg}store/store-1_580.webp 2x` type='image/webp' media="(max-width: 1240px)")
+      source(srcset=`${pathImg}store/store-1.webp` type='image/webp')
+      source(srcset=`${pathImg}store/store-1_290.png 1x, ${pathImg}store/store-1_580.png 2x` media="(max-width: 1240px)")
+      img.store__image(src=`${pathImg}store/store-1.png` alt='' loading="lazy")

@@ -1,0 +1,73 @@
+-
+  const commentList = [
+    {
+      index: '1',
+      mod: 'mobile'
+    },
+    {
+      index: '2',
+      mod: 'mobile'
+    },
+    {
+      index: '3',
+      mod: ''
+    },
+    {
+      index: '4',
+      mod: ''
+    },
+    {
+      index: '5',
+      mod: ''
+    }, {
+      index: '6',
+      mod: 'mobile'
+    },
+
+  ]
+
+.comment
+  picture.comment__picture-bg
+    source(srcset=`${pathImg}background/bg_3-mob.webp` type='image/webp' media="(max-width: 1240px)")
+    source(srcset=`${pathImg}background/bg_3.webp` type='image/webp')
+    source(srcset=`${pathImg}background/bg_3-mob.png` media="(max-width: 1240px)")
+    img.comment__image-bg(src=`${pathImg}background/bg_3.png` alt='' loading='lazy')
+  .comment__cont.cont
+    picture.comment__picture-bg-2
+      source(srcset=`${pathImg}comment/comment-bg-2.webp` type='image/webp')
+      img.comment__image-bg-2(src=`${pathImg}comment/comment-bg-2.png` alt='' loading='lazy')
+    h2.comment__title.title У клиентов ремонт — у «Мастер Крепёж» проверенный временем ассортимент
+    .comment__area
+      .comment__list
+        picture.comment__picture-bg-1
+          source(srcset=`${pathImg}comment/comment-bg-1_265.webp 1x, ${pathImg}comment/comment-bg-1_530.webp 2x` type='image/webp' media="(max-width: 1240px)")
+          source(srcset=`${pathImg}comment/comment-bg-1.webp` type='image/webp')
+          source(srcset=`${pathImg}comment/comment-bg-1_265.png 1x, ${pathImg}comment/comment-bg-1_530.png 2x` media="(max-width: 1240px)")
+          img.comment__image-bg-1(src=`${pathImg}comment/comment-bg-1.png` alt='' loading='lazy')
+        each item in commentList
+          if item.mod === 'mobile'
+            picture.comment__picture.comment__picture_mobile(class=`comment__picture_${item.index}`)
+              source(srcset=`${pathImg}comment/comment-${item.index}_218.webp 1x, ${pathImg}comment/comment-${item.index}_436.webp 2x` type='image/webp' media="(max-width: 1240px)")
+              source(srcset=`${pathImg}comment/comment-${item.index}.webp` type='image/webp')
+              source(srcset=`${pathImg}comment/comment-${item.index}_218.jpg 1x, ${pathImg}comment/comment-${item.index}_436.jpg 2x` media="(max-width: 1240px)")
+              img.comment__image(src=`${pathImg}comment/comment-${item.index}.jpg` alt='' loading='lazy')
+          else
+            picture.comment__picture(class=`comment__picture_${item.index}`)
+              source(srcset=`${pathImg}comment/comment-${item.index}.webp` type='image/webp')
+              img.comment__image(src=`${pathImg}comment/comment-${item.index}.jpg` alt='' loading='lazy')
+      form.comment__form
+        .comment__form-inner
+          h3.comment__headline
+            | Планируем развиваться по формату
+            |
+            span.comment__headline-span 1 город — 1 партнёр
+          span.comment__span Успейте занять место в перспективной нише
+          ul.comment__form-list
+            li.comment__form-item
+              input.comment__input.text(type='text' placeholder='Город' required)
+            li.comment__form-item
+              input.comment__input.text(type='tel' placeholder='Телефон' required)
+            li.comment__form-item
+              input.comment__input.text(type='email' placeholder='E-mail' required)
+            li.comment__form-item
+              button.comment__btn.text-big.btn-yellow ПРОВЕРИТЬ СВОЙ ГОРОД

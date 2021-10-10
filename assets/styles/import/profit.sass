@@ -1,0 +1,107 @@
+.profit
+  position: relative
+  @include media(950)
+    padding-bottom: 490px
+
+.profit__picture-bg
+  position: absolute
+  z-index: -1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.profit__image-bg
+  height: 100%
+  object-fit: cover
+
+.profit__cont
+  position: relative
+  padding: 100px 30px 281px
+  @include media(1240)
+    padding: 100px 15px 309px
+  @include media(950)
+    display: flex
+    flex-wrap: wrap
+    padding: 100px 15px 342px
+
+.profit__title
+  margin-bottom: 30px
+  text-align: center
+  @include media(950)
+    margin-right: 35px
+    margin-bottom: 32px
+    text-align: left
+
+.profit__title-span
+  color: $fc_blue
+
+.profit__inner
+  margin-top: 221px
+  @include media(1240)
+    margin-top: 120px
+  @include media(950)
+    margin-top: 0
+
+.profit__text
+  margin-bottom: 30px
+  max-width: 459px
+
+.profit__text_bold
+  max-width: 422px
+  font-weight: bold
+
+.profit__picture
+  position: absolute
+  top: 194px
+  right: 18px
+  @include media(1240)
+    right: -20px
+  @include media(950)
+    top: unset
+    bottom: 55px
+    right: unset
+    left: calc(50% - 199px)
+  @include media(520)
+    bottom: 112px
+    left: 0
+
+.profit__image
+  width: 749px
+  height: 573px
+  @include media(1240)
+    width: 459px
+    height: 354px
+  @include media(950)
+    width: 398px
+    height: 289px
+  @include media(520)
+    width: 320px
+    height: 232px
+
+.profit__picture-bg-1
+  position: absolute
+  top: 166px
+  left: 0
+  @include media(950)
+    right: 2px
+    left: unset
+    top: 114px
+
+.profit__image-bg-1
+  width: 127px
+  height: 78px
+  @include media(950)
+    width: 44px
+    height: 54px
+
+.profit__picture-bg-2
+  position: absolute
+  bottom: 10px
+  left: 97px
+  @include media(950)
+    display: none
+
+.profit__image-bg-2
+  width: 224px
+  height: 283px

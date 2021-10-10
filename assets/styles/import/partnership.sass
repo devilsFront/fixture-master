@@ -1,0 +1,101 @@
+.partnership
+  position: relative
+  padding: 100px 0 52px
+
+.partnership__picture-bg
+  position: absolute
+  z-index: -1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.partnership__image-bg
+  height: 100%
+  object-fit: cover
+
+.partnership__cont
+
+.partnership__title
+  max-width: 629px
+  margin-bottom: 91px
+  color: $fc_white
+  @include media(1240)
+    margin-bottom: 86px
+
+.partnership__list
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -15px
+  &::before
+    content: ''
+    position: absolute
+    top: -180px
+    right: 84px
+    +bgIcon('partnership/partnership-bg-1.svg', 234px, 163px)
+    width: 234px
+    height: 163px
+    @include media(1240)
+      top: -53px
+      right: 3px
+      width: 135px
+      height: 93px
+      +bgIcon('partnership/partnership-bg-1.svg', 135px, 93px)
+
+.partnership__item
+  position: relative
+  padding: 5px
+  border-radius: 5px 5px 0 0
+  margin: 0 15px 59px
+  width: 360px
+  background: $white
+  @include media(1240)
+    width: 412px
+  @include media(950)
+    width: 310px
+  @include media(700)
+    width: 100%
+  &::before
+    content: ''
+    position: absolute
+    bottom: -10px
+    left: 0
+    height: 9px
+    width: 100%
+    background: $blue
+
+.partnership__item-inner
+  border: 1px solid #DFDFDF
+  border-radius: 5px
+  padding: 74px 30px 46px
+  height: 100%
+  background: $white
+  text-align: center
+  @include media(1240)
+    padding: 74px 9px 46px
+
+.partnership__picture
+  position: absolute
+  top: -90px
+  left: calc(50% - 115px)
+  &::before
+    content: ''
+    position: absolute
+    top: 105px
+    right: 55px
+    width: 30px
+    height: 30px
+    background: $blue
+    border-radius: 50%
+    +bgIcon('ic_check.svg', 12px, 12px)
+
+.partnership__image
+  width: 230px
+  height: 210px
+
+.partnership__headline
+  margin-bottom: 16px
+
+.partnership__text
+

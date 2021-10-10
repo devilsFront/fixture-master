@@ -1,0 +1,110 @@
+.contract
+  padding: 100px 0 100px
+  +bgImg('contract/contract_bg.jpg')
+  color: $fc_white
+
+.contract__cont
+
+.contract__title
+  max-width: 623px
+  margin-bottom: 30px
+
+.contract__text
+  max-width: 406px
+  margin-bottom: 50px
+  @include media(1240)
+    margin-bottom: 53px
+
+.contract__list
+  position: relative
+  display: flex
+  margin: 0 -15px 49px
+  @include media(1240)
+    display: block
+    margin: 0 0 45px
+  &::before
+    content: ''
+    position: absolute
+    right: 63px
+    top: -219px
+    width: 234px
+    height: 163px
+    +bgIcon('contract/contract-bg-1.svg')
+    @include media(1240)
+      width: 135px
+      height: 93px
+      right: -13px
+      top: -50px
+      +bgIcon('contract/contract-bg-1.svg', 135px, 93px)
+
+.contract__item
+  position: relative
+  margin: 0 15px
+  padding: 5px
+  border-radius: 5px 5px 0 0
+  width: 360px
+  background: $white
+  @include media(1240)
+    width: 100%
+    margin: 0 0 35px
+  &::before
+    content: ''
+    position: absolute
+    bottom: -4px
+    left: 0
+    right: 0
+    height: 9px
+    background: $blue
+
+.contract__item-inner
+  height: 100%
+  border: 1px solid #DFDFDF
+  border-radius: 5px 5px 0 0
+  padding: 35px 35px 21px 35px
+  background: $white
+  @include media(1240)
+    padding: 25px 15px 5px
+
+.contract__item-text
+  font-weight: bold
+  color: $fc_dark
+  min-height: 124px
+  @include media(520)
+    min-height: 148px
+
+.contract__picture
+
+.contract__image
+  width: 240px
+  height: 150px
+  @include media(1240)
+    width: 185px
+    height: 150px
+
+.contract__item-number
+  padding: 27px 27px 28px 28px
+  position: absolute
+  bottom: -4px
+  right: 0
+  border-radius: 44px 0 0 0
+  background: $blue
+  font-size: 36px
+  line-height: 25px
+
+.contract__time
+  display: flex
+  align-items: center
+
+.contract__time-picture
+  margin-right: 24px
+  @include media(1240)
+    display: none
+
+.contract__time-image
+  width: 75px
+  height: 90px
+
+.contract__time-text
+  max-width: 534px
+  @include media(1240)
+    margin-top: 14px

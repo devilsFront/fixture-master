@@ -1,0 +1,100 @@
+-
+  const directionList = [
+    {
+      number: '01',
+      headline: 'Помощь в выборе помещения',
+      text: 'Вместе найдём в вашем городе перспективное место, удобное покупателям и поставщикам товаров',
+    },
+    {
+      number: '02',
+      headline: 'Подбор персонала',
+      text: 'Научим размещать вакансии, проводить собеседования и отбирать в штат специалистов, нацеленных на продолжительную работу'
+    },
+    {
+      number: '03',
+      headline: 'Подбор персонала',
+      text: 'Поделимся контактами поставщиков для снабжения всем необходимым по спецценам'
+    },
+    {
+      number: '04',
+      headline: 'Обучение руководителя',
+      text: 'До открытия погрузим вас в бизнес-процессы и объясним, как управлять торговой точкой'
+    },
+    {
+      number: '05',
+      headline: 'Подготовка персонала',
+      text: 'Организуем дополнительное обучение вашим продавцам и менеджерам для закрепления навыков и достижения плановых показателей'
+    },
+    {
+      number: '06',
+      headline: 'Дизайн-проект',
+      text: 'Разработаем для вас концепцию оформления магазина, раскладки товаров и входную вывеску'
+    },
+    {
+      number: '07',
+      headline: 'Формирование ассортимента',
+      text: 'Проанализируем рынок вашего города и выясним, какие позиции будут наиболее востребованы и рентабельны'
+    },
+    {
+      number: '08',
+      headline: 'Поставка товаров',
+      text: 'Продумаем логистику и организуем бесперебойное снабжение вашей торговой точки'
+    },
+    {
+      number: '09',
+      headline: 'Программное обеспечение',
+      text: 'Подключим вас к 1С и другим системам для удобной работы и автоматизированного контроля'
+    },
+    {
+      number: '10',
+      headline: 'Бухгалтерское сопровождение',
+      text: 'Даём рекомендации по ведению отчётности, чтобы все вопросы с налоговой были в порядке'
+    },
+    {
+      number: '11',
+      headline: 'Юридические консультации',
+      text: 'Отвечаем на вопросы по законодательству и помогаем в спорных ситуациях'
+    },
+    {
+      number: '12',
+      headline: 'Финансовая экспертиза',
+      text: 'Помогаем анализировать и прогнозировать финансовые показатели точки'
+    },
+    {
+      number: '13',
+      headline: 'Повышение продаж',
+      text: 'После открытия даём рекомендации по увеличению выручки'
+    },
+    {
+      number: '14',
+      headline: 'Привлечение покупателей',
+      text: 'Проводим анализ конкурентов в вашем регионе, настраиваем рекламную кампанию для привлечения покупателей из вашего города и берём на себя регулярное обновление маркетинговых материалов'
+    }
+  ]
+
+.direction(data-element="slider")
+  .direction__cont.cont
+    h2.direction__title.title 14 направлений, в которых вы сможете рассчитывать на нашу помощь
+    p.direction__text.text-big Гарантируем вам комплексное сопровождение по всем направлениям работы до, во время и после открытия магазина
+    picture.direction__picture-2
+      source(srcset=`${pathImg}direction/direction-2_285.webp 1x, ${pathImg}direction/direction-2_570.webp 2x` type='image/webp' media="(max-width: 1240px)")
+      source(srcset=`${pathImg}direction/direction-2.webp` type='image/webp')
+      source(srcset=`${pathImg}direction/direction-2_285.png 1x, ${pathImg}direction/direction-2_570.png 2x` media="(max-width: 1240px)")
+      img.direction__image-2(src=`${pathImg}direction/direction-2.png` alt='' loading='lazy')
+    .direction__area-box
+      picture.direction__picture-1
+        source(srcset=`${pathImg}direction/direction-1_280.webp 1x, ${pathImg}direction/direction-1_560.webp 2x` type='image/webp' media="(max-width: 1500px)")
+        source(srcset=`${pathImg}direction/direction-1.webp` type='image/webp')
+        source(srcset=`${pathImg}direction/direction-1_280.png 1x, ${pathImg}direction/direction-1_560.png 2x` media="(max-width: 1500px)")
+        img.direction__image-1(src=`${pathImg}direction/direction-1.png` alt='' loading='lazy')
+      ul.direction__area
+        each item, index in directionList
+          li.direction__item(class = index === 0 ? "direction__item_active": "", data-index= index > 8 ? index + 1: `0${index + 1}`)
+            span.direction__number= item.number
+            span.direction__headline.text-big= item.headline
+            p.direction__item-text.text= item.text
+    .direction__slider-control
+      button.direction__arrow-btn.direction__arrow-btn_left(type='button' data-element="prev")
+      span.direction__slider-current-slide.text-big(data-element="current-slide") 01
+      span.direction__slider-note.text-big / 14
+      button.direction__arrow-btn.direction__arrow-btn_right(type='button' data-element="next")

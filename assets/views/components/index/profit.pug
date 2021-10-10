@@ -1,0 +1,38 @@
+article.profit
+  picture.profit__picture-bg
+    source(srcset=`${pathImg}background/bg_1-mob.webp` type='image/webp' media="(max-width: 1240px)")
+    source(srcset=`${pathImg}background/bg_1.webp` type='image/webp')
+    source(srcset=`${pathImg}background/bg_1-mob.png` media="(max-width: 1240px)")
+    img.profit__image-bg(src=`${pathImg}background/bg_1.png` alt='' loading='lazy')
+  .profit__cont.cont
+    h2.profit__title.title
+      | Рост спроса и возможность зарабатывать
+      |
+      br
+      span.profit__title-span от 2 160 000 до 5 760 000 рублей в год с 1-й точки
+    .profit__inner
+      p.profit__text.text-big.
+        Средний чек на крепёжные элементы составляет 500 рублей. Одну точку за месяц посещает
+        от 1000 до 1300 покупателей, выручка — от 180 000 до 480 000 рублей в месяц и от
+        2 160 000 до 5 760 000 рублей в год
+      p.profit__text.profit__text_bold.text-big.
+        Это показатели одной точки. Если открыть несколько магазинов, прибыль будет кратно больше.
+    picture.profit__picture
+      source(srcset=`${pathImg}profit/profit-1_320.webp 1x, ${pathImg}profit/profit-1_640.webp 2x` type='image/webp' media="(max-width: 520px)")
+      source(srcset=`${pathImg}profit/profit-1_493.webp` type='image/webp' media="(max-width: 950px)")
+      source(srcset=`${pathImg}profit/profit-1_600.webp` type='image/webp' media="(max-width: 1240px)")
+      source(srcset=`${pathImg}profit/profit-1.webp` type='image/webp')
+      source(srcset=`${pathImg}profit/profit-1_320.png 1x, ${pathImg}profit/profit-1_640.png 2x` media="(max-width: 520px)")
+      source(srcset=`${pathImg}profit/profit-1_493.png` media="(max-width: 950px)")
+      source(srcset=`${pathImg}profit/profit-1_600.png` media="(max-width: 1240px)")
+      img.profit__image(src=`${pathImg}profit/profit-1.png` alt='' loading='lazy')
+    picture.profit__picture-bg-2
+      source(srcset=`${pathImg}profit/profit-bg-2.webp` type='image/webp')
+      img.profit__image-bg-2(src=`${pathImg}profit/profit-bg-2.png` alt='' loading='lazy')
+    include calculator
+  picture.profit__picture-bg-1
+    source(srcset=`${pathImg}profit/profit-bg-1_44.webp 1x, ${pathImg}profit/profit-bg-1_88.webp 2x` type='image/webp' media="(max-width: 950px)")
+    source(srcset=`${pathImg}profit/profit-bg-1.webp` type='image/webp')
+    source(srcset=`${pathImg}profit/profit-bg-1_44.png 1x, ${pathImg}profit/profit-bg-1_88.png 2x` media="(max-width: 950px)")
+    img.profit__image-bg-1(src=`${pathImg}profit/profit-bg-1.png` alt='' loading='lazy')
+

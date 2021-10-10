@@ -1,0 +1,32 @@
+-
+  const experienceList = [
+    'Предлагаем покупателям крепёж и другие товары в большом ассортименте и от проверенных производителей',
+    'Изготавливаем на собственном производстве крепёжные элементы по индивидуальным размерам',
+    'Работаем и с розничными клиентами, и с корпоративными покупателями, и с гос. заказчиками',
+    'Ведём продажи офлайн и онлайн'
+  ]
+
+article.experience
+  picture.experience__picture-bg
+    source(srcset=`${pathImg}background/bg_3-mob.webp` type='image/webp' media="(max-width: 1240px)")
+    source(srcset=`${pathImg}background/bg_3.webp` type='image/webp')
+    source(srcset=`${pathImg}background/bg_3-mob.png` media="(max-width: 1240px)")
+    img.experience__image-bg(src=`${pathImg}background/bg_3.png` alt='' loading='lazy')
+  .experience__cont.cont
+    picture.experience__picture
+      source(srcset=`${pathImg}experience/experience-1.webp` type='image/webp')
+      img.experience__image(src=`${pathImg}experience/experience-1.png` alt='' loading='lazy')
+    .experience__inner
+      h2.experience__title.title «Мастер Крепёж» — помогаем менять пространства и ищем единомышленников
+      p.experience__text.text-big Сеть «Мастер Крепёж» на рынке уже почти 20 лет — знаем все нюансы отрасли
+      ul.experience__list
+        each item, index in experienceList
+          li.experience__item
+            img.experience__item-image(src=`${pathImg}experience/ic_experience-${index+1}.svg` alt='' loading="lazy")
+            p.experience__text-small.text= item
+      p.experience__text.text-big.
+        Сейчас мы начинаем развивать франчайзинговую сеть и планируем выйти на
+        рынки новых регионов, поэтому ищем единомышленников, разделяющих принципы ответственности и
+        трудолюбия
+    include form
+    +form('Оставьте заявку, чтобы познакомиться лично и обсудить перспективы развития', 'ОБСУДИТЬ', 'experience')

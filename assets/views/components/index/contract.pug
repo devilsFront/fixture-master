@@ -1,0 +1,28 @@
+-
+  const contractList = [
+    'Заключаем договор коммерческой концессии или лицензионный договор при передаче прав на пользование товарным знаком и ноу-хау',
+    'Предоставляем образец договора аренды или проверяем договор вашего арендодателя — исключаем невыгодные условия и скрытые комиссии',
+    'Даём работающие образцы трудовых договоров для всех позиций, а также договоров поставки'
+  ]
+
+.contract
+  .contract__cont.cont
+    h2.contract__title.title Наши с вами договорённости будут подтверждены юридически
+    p.contract__text.text-big.
+      Все аспекты сотрудничества оформляем официально и на каждом этапе действуем строго легально
+    ul.contract__list
+      each item, index in contractList
+        li.contract__item
+          .contract__item-inner
+            p.contract__item-text.text-big= item
+            picture.contract__picture
+              source(srcset=`${pathImg}contract/contract-${index+1}_185.webp 1x, ${pathImg}contract/contract-${index+1}_370.webp 2x` type='image/webp' media="(max-width: 1240px)")
+              source(srcset=`${pathImg}contract/contract-${index+1}.webp` type='image/webp')
+              source(srcset=`${pathImg}contract/contract-${index+1}_185.png 1x, ${pathImg}contract/contract-${index+1}_370.png 2x` media="(max-width: 1240px)")
+              img.contract__image(src=`${pathImg}contract/contract-${index+1}.png` alt='' loading='lazy')
+          span.contract__item-number= `0${index+1}`
+    .contract__time
+      picture.contract__time-picture
+        source(srcset=`${pathImg}contract/contract-time.webp` type='image/webp')
+        img.contract__time-image(src=`${pathImg}contract/contract-time.png` alt='' loading='lazy')
+      p.contract__time-text.text-big Вам не придётся тратить часы и дни на составление документов, и в то же время вы будете уверены в правильности своих действий

@@ -1,0 +1,173 @@
+.calculator
+  border-radius: 5px
+  position: absolute
+  z-index: 1
+  bottom: -451px
+  right: 0
+  left: 0
+  background: $blue
+  text-align: left
+  color: $fc_white
+  box-shadow: 0px 25px 30px #2F2F2F
+  @include media(1240)
+    right: 16px
+    left: 16px
+    bottom: -615px
+  @include media(950)
+    bottom: -710px
+  @include media(700)
+    bottom: -710px
+  @include media(520)
+    bottom: -634px
+  &::before
+    content: ''
+    position: absolute
+    bottom: -10px
+    left: 50px
+    right: 50px
+    height: 10px
+    background: #014484
+    border-radius: 0 0 5px 5px
+    @include media(1240)
+      left: 25px
+      right: 25px
+
+.calculator__cont
+  border-radius: 5px
+  border: 1px solid #014484
+  display: flex
+  justify-content: space-between
+  margin: 5px
+  padding: 44px 91px 17px
+  @include media(1240)
+    padding: 44px 15px
+    display: block
+
+.calculator__body
+  width: 568px
+  flex-shrink: 0
+  @include media(1240)
+    width: 100%
+
+.calculator__list
+
+.calculator__item
+  margin-bottom: 30px
+
+.calculator__note
+  display: block
+  margin-bottom: 27px
+  @include media(1240)
+    margin-bottom: 22px
+
+.calculator__line
+  margin-bottom: 25px
+  height: 8px
+  background: $white
+  border-radius: 5px
+  position: relative
+  @include media(1240)
+    margin-bottom: 20px
+
+.calculator__line-fill
+  position: absolute
+  top: 0
+  left: 0
+  right: 100%
+  height: 8px
+  background: rgba($blue, .8)
+  border-radius: 5px
+
+.calculator__line-point
+  border-radius: 50%
+  width: 30px
+  height: 30px
+  background: $white
+  position: absolute
+  left: 0
+  top: -12px
+  cursor: pointer
+  @include media(1240)
+    width: 20px
+    height: 20px
+    top: -6px
+  &::before
+    content: ''
+    position: absolute
+    top: 7px
+    left: 7px
+    width: 16px
+    height: 16px
+    background: $blue
+    border-radius: 50%
+    @include media(1240)
+      top: 5px
+      left: 5px
+      width: 10px
+      height: 10px
+
+.calculator__input
+  position: absolute
+  width: calc(100% - 12px)
+  top: -4px
+  left: 6px
+  right: 6px
+  opacity: 0
+  cursor: pointer
+
+.calculator__value-list
+  display: flex
+  justify-content: space-around
+
+.calculator__value-item
+  padding-top: 35px
+  position: relative
+  font-size: 16px
+  line-height: 25px
+  @include media(1240)
+    font-size: 14px
+    line-height: 18px
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 50%
+    height: 20px
+    width: 1px
+    background: $white
+
+.calculator__result
+  margin-top: 121px
+  width: 323px
+  @include media(1240)
+    text-align: center
+    margin-top: 50px
+    width: 100%
+
+.calculator__title
+  display: block
+  margin-bottom: 50px
+  font-weight: bold
+  @include media(1240)
+    margin-bottom: 30px
+
+.calculator__result-value
+  display: inline-block
+  margin-bottom: 47px
+  margin-right: 10px
+  font-weight: bold
+  @include media(1240)
+    margin-bottom: 30px
+
+.calculator__result-span
+  font-size: 24px
+  line-height: 45px
+  @include media(1240)
+    font-size: 16px
+    line-height: 35px
+
+.calculator__btn
+  padding: 22px 22px
+  width: 100%
+  @include media(520)
+    padding: 7px 22px

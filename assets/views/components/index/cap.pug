@@ -1,0 +1,30 @@
+-
+  const capList = [
+    {text: 'ГК работает с 2002 года', img: 'cap-1'},
+    {text: '11 запущенных точек', img: 'cap-2'},
+    {text: 'Свыше 7000 изделий', img: 'cap-3'},
+    {text: 'Среднее количество клиентов — от 1000 до 1300 в месяц', img: 'cap-4'},
+  ]
+
+.cap
+  picture.cap__picture-bg
+    source(srcset=`${pathImg}cap/cap_bg-mob.webp` type='image/webp media="(max-width: 1240px)"')
+    source(srcset=`${pathImg}cap/cap_bg.webp` type='image/webp')
+    source(srcset=`${pathImg}cap/cap_bg-mob.png` type='image/webp media="(max-width: 1240px)"')
+    img.cap__image-bg(src=`${pathImg}cap/cap_bg.png` alt='')
+  .cap__cont.cont
+    h1.cap__caption.caption
+      span.cap__caption-note Откройте бизнес с «Мастер Крепёж» —
+      |
+      | обретите прочные позиции и стабильный заработок
+    p.cap__text 100% сопровождение при открытии точки от 5 кв.м. до 100 кв.м. в любом городе России
+    picture.cap__picture
+      source(srcset=`${pathImg}cap/cap-main.webp` type='image/webp')
+      img.cap__image(src=`${pathImg}cap/cap-main.png` alt='')
+    ul.cap__list
+      each item in capList
+        li.cap__item
+          img.cap__item-image(src=`${pathImg}cap/${item.img}.svg`)
+          span.cap__item-text.text-big= item.text
+    include form
+    +form('Получить подробные материалы франшизы Презентация, финансовая модель (PDF Х Mb, XLS Х Mb)', 'Получить материалы')

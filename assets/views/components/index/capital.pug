@@ -1,0 +1,61 @@
+-
+  capitalTable = [
+    [
+      'От 50 до 250 тыс. человек',
+      "100 т. р."
+    ],
+    [
+      'От 250 до 500 тыс. человек',
+      '150 т. р.',
+    ],
+    [
+      'От 500 тыс. до 1 млн. человек',
+      '200 т. р.',
+    ],
+    [
+      'Более 1 млн. человек',
+      '250 т. р.',
+    ]
+  ]
+
+.capital
+  picture.capital__picture-bg
+    source(srcset=`${pathImg}background/bg_1-mob.webp` type='image/webp' media="(max-width: 1240px)")
+    source(srcset=`${pathImg}background/bg_1.webp` type='image/webp')
+    source(srcset=`${pathImg}background/bg_1-mob.png` media="(max-width: 1240px)")
+    img.capital__image-bg(src=`${pathImg}background/bg_1.png` alt='' loading='lazy')
+  .capital__cont.cont
+    h2.capital__title.title
+      | Капитал и желание —
+      |
+      span.capital__title-span трамплин для вашего взлёта
+    .capital__area
+      .capital__table
+        .capital__table-inner
+          table.capital__table-table
+            tr.capital__table-row
+              th.capital__table-headline.text-big Численность населения
+              th.capital__table-headline.text-big Паушальный взнос
+            each item in capitalTable
+              tr.capital__table-row
+                each elem in item
+                  td.capital__table-cell.text= elem
+            .capital__table-round
+              .capital__table-round-inner
+                span.capital__table-round-title.text-big Роялти
+                span.capital__table-round-note.text 1% с выручки
+          picture.capital__table-picture
+            source(srcset=`${pathImg}capital/capital-1_426.webp 1x, ${pathImg}capital/capital-1_852.webp 2x` type='image/webp' media="(max-width: 1240px)")
+            source(srcset=`${pathImg}capital/capital-1.webp` type='image/webp')
+            source(srcset=`${pathImg}capital/capital-1_426.png 1x, ${pathImg}capital/capital-1_852.png 2x` media="(max-width: 1240px)")
+            image.capital__table-img(src=`${pathImg}capital/capital-1.png` alt='' loading='lazy')
+      .capital__info
+        p.capital__info-text.text-big.
+          Партнёром сети «Мастер Крепёж» может быть каждый, кто хочет стать частью сильного
+          бренда, действовать по проверенной стратегии и нацелен на развитие. Наши партнёры не
+          останавливаются на одной точке, открывая вторую и последующие для кратного увеличения
+          своей прибыли
+        span.capital__info-note.text-big Паушальный взнос — от 100 т. р до 250 т. рублей
+        span.capital__info-note.text-big Общие инвестиции — от 700 000 до 1 000 000 рублей
+        span.capital__info-note.text-big Окупаемость — от 6 до 8 месяцев
+        button.capital__info-btn.btn-yellow.text-big СДЕЛАТЬ ТОЧНЫЙ РАССЧЁТ

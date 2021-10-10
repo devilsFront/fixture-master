@@ -1,0 +1,47 @@
+-
+  const partnershipList = [
+    {
+      headline: 'Независимость от сезона',
+      text: 'Продажи крепежа и СИЗ стабильны в течение года - можно начинать в любое время'
+    },
+    {
+      headline: 'Конкурентный анализ',
+      text: 'До открытия торговой точки изучим рынок вашего региона, определим плюсы, минусы и перспективы'
+    },
+    {
+      headline: 'Проверенная смета',
+      text: 'Расходы по каждому направлению уже рассчитаны с точностью до 1000 рублей'
+    },
+    {
+      headline: 'Специальные условия',
+      text: 'Даём контакты поставщиков торгового оборудования и товаров, которые сэкономят вам 5–70% стартового капитала'
+    },
+    {
+      headline: 'Высокая рентабельность',
+      text: 'Среднее значение по большинству позиций составляет 35-45%'
+    },
+    {
+      headline: 'Страховка от ошибок',
+      text: 'Открытие под руководством франчайзера предостерегает от убытков и неверных решений на старте'
+    },
+  ]
+
+.partnership
+  picture.partnership__picture-bg
+    source(srcset=`${pathImg}background/bg_2-mob.webp` type='image/webp' media="(max-width: 1240px)")
+    source(srcset=`${pathImg}background/bg_2.webp` type='image/webp')
+    source(srcset=`${pathImg}background/bg_2-mob.png` media="(max-width: 1240px)")
+    img.partnership__image-bg(src=`${pathImg}background/bg_2.png` alt='' loading='lazy')
+  .partnership__cont.cont
+    h2.partnership__title.title Почему стоит выбрать партнёрство с компанией «Мастер Крепёж»?
+    ul.partnership__list
+      each item, index in partnershipList
+        li.partnership__item
+          .partnership__item-inner
+            picture.partnership__picture
+              source(srcset=`${pathImg}partnership/partnership-${index+1}.webp 1x, ${pathImg}partnership/partnership-${index+1}_460.webp 2x` type='image/webp' media="(max-width: 1240px)")
+              source(srcset=`${pathImg}partnership/partnership-${index+1}.webp` type='image/webp')
+              source(srcset=`${pathImg}partnership/partnership-${index+1}.png 1x, ${pathImg}partnership/partnership-${index+1}_460.png 2x` media="(max-width: 1240px)")
+              img.partnership__image(src=`${pathImg}partnership/partnership-${index+1}.png` alt='' loading='lazy')
+            h4.partnership__headline.text-big= item.headline
+            p.partnership__text.text= item.text

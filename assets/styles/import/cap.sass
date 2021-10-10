@@ -1,0 +1,86 @@
+.cap
+  position: relative
+  margin-top: -173px
+  padding-top: 215px
+  @include media(1240)
+    padding-top: 232px
+
+.cap__picture-bg
+  position: absolute
+  z-index: -1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.cap__image-bg
+  height: 100%
+  object-fit: cover
+
+.cap__cont
+  position: relative
+  padding-bottom: 190px
+  @include media(1240)
+    padding-bottom: 250px
+  @include media(950)
+    padding-bottom: 270px
+  @include media(700)
+    padding-bottom: 370px
+  @include media(520)
+    padding-bottom: 548px
+
+.cap__caption
+  margin-bottom: 62px
+  max-width: 834px
+  @include media(1240)
+    margin-bottom: 33px
+
+.cap__caption-note
+  color: $blue
+
+.cap__text
+  margin-bottom: 61px
+  max-width: 531px
+  font-size: 24px
+  line-height: 35px
+  @include media(1240)
+    margin-bottom: 30px
+
+.cap__picture
+  position: absolute
+  right: 9px
+  top: -2px
+  @include media(1240)
+    display: none
+
+.cap__image
+  width: 546px
+  height: 758px
+
+.cap__list
+  display: flex
+  flex-wrap: wrap
+  max-width: 654px
+
+.cap__item
+  display: flex
+  margin-right: 45px
+  margin-bottom: 25px
+  min-width: 248px
+  align-items: center
+  @include media(950)
+    margin-right: 40px
+    margin-bottom: 16px
+  @include media(700)
+    margin-right: 0
+
+.cap__item-text
+  max-width: 244px
+  @include media(700)
+    max-width: 100%
+
+.cap__item-image
+  margin-right: 28px
+  width: 40px
+  height: 40px
+

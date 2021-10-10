@@ -1,0 +1,158 @@
+.steps
+  position: relative
+  padding: 100px 0 0
+
+.steps__picture-bg
+  position: absolute
+  z-index: -1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.steps__image-bg
+  height: 100%
+  object-fit: cover
+
+.steps__cont
+  position: relative
+  padding-bottom: 177px
+  @include media(1240)
+    padding-bottom: 290px
+  @include media(700)
+    padding-bottom: 400px
+  @include media(520)
+    padding-bottom: 614px
+
+.steps__title
+  margin: 0 auto 50px
+  max-width: 735px
+  text-align: center
+  color: $fc_white
+  @include media(1240)
+    text-align: left
+    margin: 0 0 50px
+  @include media(700)
+    margin-bottom: 35px
+
+.steps__area
+  display: flex
+  align-items: flex-start
+  flex-wrap: wrap
+  @include media(1240)
+    justify-content: space-between
+
+.steps__picture
+  position: relative
+  margin-right: 128px
+  filter: drop-shadow(0px 15px 30px rgba(21, 44, 124, 0.59))
+  @include media(1240)
+    margin-right: 0
+  @include media(700)
+    order: 1
+
+.steps__image
+  width: 555px
+  height: 463px
+  @include media(1240)
+    width: 420px
+    height: 350px
+  @include media(950)
+    width: 290px
+    height: 242px
+
+.steps__picture-note
+  position: absolute
+  right: -25px
+  bottom: 27px
+  z-index: 1
+  display: inline-block
+  width: 280px
+  padding: 12px 46px
+  @include media(950)
+    right: 4px
+    bottom: 26px
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    border-radius: 5px
+    background-color: $white
+    transform: skew(168deg)
+    z-index: -1
+    @include media(950)
+      transform: skew(170deg)
+
+.steps__list
+  position: relative
+  margin-top: 29px
+  width: 397px
+  flex-shrink: 0
+  @include media(950)
+    width: 340px
+    margin-top: 0
+  @include media(700)
+    margin-bottom: 21px
+    width: 100%
+  &::before
+    content: ''
+    position: absolute
+    top: -12px
+    bottom: 29px
+    left: 10px
+    width: 1px
+    background: $white
+    @include media(1240)
+      bottom: 10px
+    @include media(700)
+      top: -4px
+      left: 11px
+
+.steps__item
+  position: relative
+  margin-bottom: 40px
+  padding-left: 67px
+  color: $fc_white
+  cursor: pointer
+  &:hover
+    @include hover
+      &::before
+        box-shadow: 0px 15px 30px rgba(21, 44, 124, 0.59)
+  @include media(1240)
+    margin-bottom: 23px
+  @include media(950)
+    padding-left: 41px
+    margin-bottom: 10px
+  &::before
+    content: ''
+    position: absolute
+    top: 3px
+    left: 0
+    width: 20px
+    height: 20px
+    border-radius: 50%
+    background: $white
+    @include media(700)
+      top: calc(50% - 12px)
+      left: 1px
+  &::after
+    content: ''
+    position: absolute
+    top: 8px
+    left: 5px
+    width: 11px
+    height: 11px
+    background: $blue
+    border-radius: 50%
+    @include media(700)
+      top: calc(50% - 7px)
+      left: 6px
+
+.steps__item-span
+  font-weight: bold
+  @include media(950)
+    display: block
+    margin-top: 3px

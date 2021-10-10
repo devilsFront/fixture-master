@@ -1,0 +1,78 @@
+.experience
+  position: relative
+  padding: 100px 0 0
+  color: $fc_white
+
+.experience__picture-bg
+  position: absolute
+  z-index: -1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.experience__image-bg
+  height: 100%
+  object-fit: cover
+
+.experience__cont
+  position: relative
+  padding-bottom: 136px
+  @include media(1240)
+    padding-bottom: 230px
+  @include media(950)
+    padding-bottom: 230px
+  @include media(700)
+    padding-bottom: 325px
+  @include media(520)
+    padding-bottom: 494px
+
+.experience__picture
+  position: absolute
+  bottom: 140px
+  left: -3px
+  @include media(1240)
+    display: none
+
+.experience__image
+  width: 500px
+  height: 581px
+
+.experience__inner
+  margin-left: auto
+  margin-right: 31px
+  max-width: 621px
+  @include media(1240)
+    margin: 0
+
+.experience__title
+  margin-bottom: 30px
+  max-width: 532px
+  @include media(520)
+    margin-bottom: 32px
+
+.experience__text
+  margin-bottom: 50px
+  font-weight: bold
+  max-width: 621px
+  &:last-of-type
+    max-width: 546px
+
+.experience__list
+  margin-bottom: 50px
+  max-width: 473px
+
+.experience__item
+  display: flex
+  margin-bottom: 30px
+  align-items: center
+  @include media(520)
+    margin-bottom: 32px
+
+.experience__item-image
+  margin-right: 27px
+  flex-shrink: 0
+  width: 40px
+  height: 40px
+
+.experience__text-small

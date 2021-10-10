@@ -1,0 +1,75 @@
+.repair
+
+.repair__cont
+  display: flex
+  position: relative
+  justify-content: space-between
+  padding: 181px 30px 100px
+  @include media(1240)
+    padding: 181px 15px 100px
+    background-size: 285px 122px
+  @include media(950)
+    flex-wrap: wrap
+  @include media(700)
+    padding: 250px 15px 100px
+  @include media(520)
+    padding: 250px 15px 104px
+
+.repair__picture-bg
+  position: absolute
+  bottom: 0
+  right: 30px
+  @include media(1240)
+    right: 15px
+    bottom: 3px
+
+.repair__image-bg
+  width: 378px
+  height: 162px
+  @include media(1240)
+    width: 285px
+    height: 122px
+
+.repair__picture
+  z-index: -1
+  @include media(950)
+    margin: 0 auto
+    order: 1
+  @include media(520)
+    margin-top: 15px
+    padding-bottom: 158%
+    width: 100%
+    position: relative
+
+.repair__image
+  width: 480px
+  height: 619px
+  @include media(1240)
+    width: 400px
+    height: 542px
+  @include media(520)
+    width: 100%
+    height: auto
+    position: absolute
+    top: 0
+    left: 0
+
+.repair__inner
+  margin-top: 147px
+  max-width: 585px
+  @include media(1240)
+    margin-top: 50px
+    max-width: 420px
+  @include media(950)
+    max-width: 100%
+    margin-top: 42px
+
+.repair__title
+  margin-bottom: 30px
+  @include media(1240)
+    margin-bottom: 32px
+
+.repair__text
+  margin-bottom: 30px
+  @include media(1240)
+    margin-bottom: 31px

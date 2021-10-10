@@ -1,0 +1,33 @@
+-
+  const stepsList = [
+    'Заключение договора франшизы. <span class="steps__item-span text-big">От 1 дня</span>',
+    'Подбор и аренда помещения. <span class="steps__item-span text-big">От 14 дней</span>',
+    'Ремонт и оснащение торгового зала. <span class="steps__item-span text-big">От 14 дней</span>',
+    'Поиск сотрудников. <span class="steps__item-span text-big">От 14 дней</span>',
+    'Принятие и размещение продукции. <span class="steps__item-span text-big">От 7 дней</span>',
+    'Обучение персонала. <span class="steps__item-span text-big">От 7 дней</span>',
+    'Открытие торговой точки. <span class="steps__item-span text-big">От 1 дня</span>',
+  ]
+
+.steps
+  picture.steps__picture-bg
+    source(srcset=`${pathImg}background/bg_3-mob.webp` type='image/webp' media="(max-width: 1240px)")
+    source(srcset=`${pathImg}background/bg_3.webp` type='image/webp')
+    source(srcset=`${pathImg}background/bg_3-mob.png` media="(max-width: 1240px)")
+    img.steps__image-bg(src=`${pathImg}background/bg_3.png` alt='' loading='lazy')
+  .steps__cont.cont
+    h2.steps__title.title Открытие торговой точки по франшизе - это чётко построенные действия
+    .steps__area
+      picture.steps__picture
+        source(srcset=`${pathImg}steps/steps-1_290.webp 1x, ${pathImg}steps/steps-1_580.webp 2x` type='image/webp' media="(max-width: 950px)")
+        source(srcset=`${pathImg}steps/steps-1_420.webp` type='image/webp' media="(max-width: 1240px)")
+        source(srcset=`${pathImg}steps/steps-1.webp` type='image/webp')
+        source(srcset=`${pathImg}steps/steps-1_290.jpg 1x, ${pathImg}steps/steps-1_580.jpg 2x` media="(max-width: 950px)")
+        source(srcset=`${pathImg}steps/steps-1_420.jpg` media="(max-width: 1240px)")
+        img.steps__image(src=`${pathImg}steps/steps-1.jpg` alt='' loading='lazy')
+        span.steps__picture-note.text Наведите курсор на кружки, чтобы увидеть информацию
+      ul.steps__list
+        each item in stepsList
+          li.steps__item.text!= item
+    include form
+    +form('Оставьте заявку, чтобы начать путь к открытию <br> и уже через 2 месяца зарабатывать от 180 000 до 480 000 рублей', 'НАЧАТЬ', 'steps')

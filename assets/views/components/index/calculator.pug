@@ -1,0 +1,67 @@
+-
+  const calculator = [
+    {
+      note: 'Размер среднего чека, руб:',
+      value: [
+        '400',
+        '450',
+        '500',
+        '550',
+        '600',
+      ],
+      input: {
+        min: '380',
+        max: '620'
+      }
+    },
+    {
+      note: 'Количество продаж:',
+      value: [
+        '1100',
+        '1200',
+        '1300',
+        '1400',
+        '1500',
+        '1600',
+      ],
+      input: {
+        min: '1080',
+        max: '1620'
+      }
+    },
+    {
+      note: 'Количество точек:',
+      value: [
+        '1',
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+      ],
+      input: {
+        min: '1',
+        max: '6'
+      }
+    }
+  ]
+
+aside.calculator(data-element="calculator")
+  .calculator__cont
+    .calculator__body
+      .calculator__list
+        each item in calculator
+          .calculator__item(data-element="calculator-item")
+            span.calculator__note.text-big= item.note
+            .calculator__line
+              .calculator__line-fill(data-element="calculator-line-fill")
+              .calculator__line-point(data-element="calculator-point")
+              input.calculator__input(type='range' min=item.input.min max=item.input.max value=item.input.min data-element="calculator-input")
+            ul.calculator__value-list
+              each value in item.value
+                li.calculator__value-item= value
+    .calculator__result
+      span.calculator__title.title Чистая прибыль:
+      span.calculator__result-value.title(data-element="calculator-value") XXX XXX
+      span.calculator__result-span рублей в год
+      button.calculator__btn.text-big.btn-yellow(type="button") ПОЛУЧИТЬ ФИНАНСОВУЮ МОДЕЛЬ

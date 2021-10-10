@@ -1,0 +1,229 @@
+.comment
+  position: relative
+
+.comment__picture-bg
+  position: absolute
+  z-index: -1
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+
+.comment__image-bg
+  height: 100%
+  object-fit: cover
+
+.comment__cont
+  padding: 100px 30px 109px
+  position: relative
+  @include media(1240)
+    padding: 40px 15px 49px
+
+.comment__title
+  margin-bottom: 47px
+  max-width: 721px
+  color: $fc_white
+  @include media(1240)
+    margin-bottom: 0
+
+.comment__area
+  display: flex
+  @include media(1240)
+    display: block
+
+.comment__list
+  position: relative
+  width: 700px
+  @include media(1240)
+    width: 100%
+    height: 365px
+
+.comment__picture-bg-1
+  position: absolute
+  bottom: -109px
+  left: -10px
+  @include media(1240)
+    bottom: unset
+    top: 51px
+    left: -15px
+
+.comment__image-bg-1
+  width: 420px
+  height: 606px
+  @include media(1240)
+    width: 265px
+    height: 390px
+
+.comment__picture
+  position: absolute
+  padding: 5px
+  border-radius: 5px
+  background: $white
+  filter: drop-shadow(0px 15px 30px rgba(21, 44, 124, 0.59))
+  @include media(1240)
+    padding: 3px
+    display: none
+
+.comment__picture_mobile
+  @include media(1240)
+    display: block
+
+.comment__picture_1
+  top: 26px
+  left: 93px
+  @include media(1240)
+    top: 37px
+    left: 66px
+  .comment__image
+    width: 360px
+    height: 157px
+    @include media(1240)
+      width: 218px
+      height: 95px
+
+.comment__picture_2
+  top: 199px
+  left: 93px
+  @include media(1240)
+    top: 142px
+    left: 65px
+  .comment__image
+    width: 285px
+    height: 117px
+    @include media(1240)
+      width: 218px
+      height: 90px
+
+.comment__picture_3
+  top: 338px
+  left: 93px
+  .comment__image
+    width: 446px
+    height: 113px
+
+.comment__picture_4
+  top: 132px
+  left: 384px
+  .comment__image
+    width: 256px
+    height: 134px
+
+.comment__picture_5
+  top: 303px
+  left: 311px
+  .comment__image
+    width: 238px
+    height: 61px
+
+.comment__picture_6
+  top: 414px
+  left: 320px
+  @include media(1240)
+    top: 242px
+    left: 65px
+  .comment__image
+    width: 265px
+    height: 115px
+    @include media(1240)
+      width: 218px
+      height: 95px
+
+.comment__image
+  border: 1px solid #DFDFDF
+  border-radius: 5px
+
+.comment__form
+  flex-shrink: 0
+  width: 487px
+  position: relative
+  z-index: 1
+  padding: 5px
+  border-radius: 5px
+  box-shadow: 0px 15px 30px rgba(146, 142, 142, 0.4)
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 71.79%, #F8F8F8 92.4%)
+  @include media(1240)
+    width: 100%
+  &::before
+    content: ''
+    position: absolute
+    bottom: -10px
+    left: 17px
+    right: 17px
+    height: 10px
+    background: #DFDFDF
+    border-radius: 0 0 5px 5px
+    @include media(1240)
+      left: 29px
+      right: 29px
+
+.comment__form-inner
+  border: 1px solid #DFDFDF
+  border-radius: 5px
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 71.79%, #F8F8F8 92.4%)
+  padding: 45px 45px 32px 44px
+  @include media(1240)
+    padding: 29px 18px 10px
+
+.comment__picture-bg-2
+  position: absolute
+  top: 63px
+  right: 59px
+  @include media(1240)
+    display: none
+
+.comment__image-bg-2
+  width: 268px
+  height: 212px
+
+.comment__headline
+  margin-bottom: 33px
+  font-size: 24px
+  line-height: 35px
+  @include media(1240)
+    margin-bottom: 20px
+    font-size: 14px
+    line-height: 18px
+
+.comment__headline-span
+  color: $fc_blue
+
+.comment__span
+  display: block
+  margin-bottom: 35px
+  @include media(1240)
+    margin-bottom: 20px
+
+.comment__form-list
+
+.comment__form-item
+  position: relative
+  margin-bottom: 15px
+  @include media(1240)
+    margin-bottom: 19px
+    &:last-child
+      margin-top: 23px
+  &:not(:last-child)::before
+    content: ''
+    border-radius: 0 0 5px 5px
+    position: absolute
+    height: 5px
+    bottom: -5px
+    left: 0
+    right: 0
+    background: $yellow
+
+.comment__input
+  border-radius: 5px 5px 0 0
+  padding: 23px 30px
+  border: none
+  width: 100%
+  background: $white
+  @include media(1240)
+    padding: 23px 25px
+    background: #F5F6FB
+
+.comment__btn
+  width: 100%
+  padding: 17px 20px
+  @include media(1240)
+    padding: 19px 20px
